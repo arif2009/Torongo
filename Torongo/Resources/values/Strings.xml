@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="ApplicationName">Torongo</string>
+
+  <string-array name="time_array">
+    <item>Choose time</item>
+    <item>0100</item>
+    <item>0200</item>
+    <item>0300</item>
+    <item>0400</item>
+    <item>0500</item>
+    <item>0600</item>
+    <item>0700</item>
+    <item>0800</item>
+    <item>0900</item>
+    <item>1000</item>
+    <item>1100</item>
+    <item>1200</item>
+    <item>1300</item>
+    <item>1400</item>
+    <item>1500</item>
+    <item>1600</item>
+    <item>1700</item>
+    <item>1800</item>
+    <item>1900</item>
+    <item>2000</item>
+    <item>2100</item>
+    <item>2200</item>
+    <item>2300</item>
+    <item>2400</item>
+  </string-array>
+
+  <string-array name="weather_array">
+    <item>Choose weather</item>
+    <item>Foggy</item>
+    <item>Rainy</item>
+    <item>Sunny</item>
+    <item>Clear</item>
+  </string-array>
+
+  <string-array name="district_array">
+    <item>Choose district</item>
+    <item>
+      <b>
+        <i>Barisal Division</i>
+      </b>
+    </item>
+    <item>Barguna</item>
+    <item>Barisal</item>
+    <item>Bhola</item>
+    <item>Jhalokati</item>
+    <item>Patuakhali</item>
+    <item>Pirojpur</item>
+
+    <item>
+      <b>
+        <i>Chittagong Division</i>
+      </b>
+    </item>
+    <item>Bandarban</item>
+    <item>Brahmanbaria</item>
+    <item>Chandpur</item>
+    <item>Chittagong</item>
+    <item>Comilla</item>
+    <item>Cox\'s Bazar</item>
+    <item>Feni</item>
+    <item>Khagrachhari</item>
+    <item>Lakshmipur</item>
+    <item>Noakhali</item>
+    <item>Rangamati </item>
+
+    <item>
+      <b>
+        <i>Dhaka Division</i>
+      </b>
+    </item>
+    <item>Dhaka</item>
+    <item>Faridpur</item>
+    <item>Gazipur</item>
+    <item>Gopalganj</item>
+    <item>Jamalpur</item>
+    <item>Kishoregonj</item>
+    <item>Madaripur</item>
+    <item>Manikganj</item>
+    <item>Munshiganj</item>
+    <item>Mymensingh</item>
+    <item>Narayanganj</item>
+    <item>Narsingdi</item>
+    <item>Netrakona</item>
+    <item>Rajbari</item>
+    <item>Shariatpur</item>
+    <item>Sherpur</item>
+    <item>Tangail</item>
+
+    <item>
+      <b>
+        <i>Khulna Division</i>
+      </b>
+    </item>
+    <item>Bagerhat</item>
+    <item>Chuadanga</item>
+    <item>Jessore</item>
+    <item>Jhenaidah</item>
+    <item>Khulna</item>
+    <item>Kushtia</item>
+    <item>Magura</item>
+    <item>Meherpur</item>
+    <item>Narail</item>
+    <item>Satkhira</item>
+    
+    <item>
+      <b>
+        <i>Rajshahi Division</i>
+      </b>
+    </item>
+    <item>Bogra</item>
+    <item>Chapainababganj</item>
+    <item>Joypurhat</item>
+    <item>Pabna</item>
+    <item>Naogaon</item>
+    <item>Natore</item>
+    <item>Rajshahi</item>
+    <item>Sirajganj</item>
+    
+    <item>
+      <b>
+        <i>Rangpur Division</i>
+      </b>
+    </item>
+    <item>Dinajpur</item>
+    <item>Gaibandha</item>
+    <item>Kurigram</item>
+    <item>Lalmonirhat</item>
+    <item>Nilphamari</item>
+    <item>Panchagarh</item>
+    <item>Rangpur</item>
+    <item>Thakurgaon</item>
+    
+    <item>
+      <b>
+        <i>Sylhet Division</i>
+      </b>
+    </item>
+    <item>Habiganj</item>
+    <item>Maulvibazar</item>
+    <item>Sunamganj</item>
+    <item>Sylhet</item>
+
+  </string-array>
+</resources>
