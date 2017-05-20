@@ -67,7 +67,13 @@ namespace Torongo
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
+			public const int appicon_white = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int background_1 = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int Icon = 2130837506;
 			
 			static Drawable()
 			{

@@ -10,7 +10,7 @@ using Torongo.Repository;
 
 namespace Torongo
 {
-    [Activity(Label = "তরঙ্গ", MainLauncher = true, ScreenOrientation= ScreenOrientation.Portrait, Icon = "@drawable/icon")]
+    [Activity(Label = "তরঙ্গ", MainLauncher = true, ScreenOrientation= ScreenOrientation.Portrait, Icon = "@drawable/appicon_white")]
     public class MainActivity : Activity
     {
         private Spinner _timeTo;
