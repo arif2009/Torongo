@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections;
-using System.Linq;
 using Android.App;
 using Android.Content.PM;
 using Android.Widget;
 using Android.OS;
-using Android.Views;
+using Torongo.Model;
 using Torongo.Repository;
+using static System.StringComparison;
 
 namespace Torongo
 {
@@ -69,41 +69,84 @@ namespace Torongo
 
         private void Find_Click(object sender, EventArgs e)
         {
-            var to = _timeTo.SelectedItem.ToString();
-            var from = _timeFrom.SelectedItem;
-            var we = _weather.SelectedItem;
-            var lo = _district.SelectedItem;
+            var defaultTime = "Choose time";
+            var defaultWeather = "Choose weather";
+            var defaultDistrict = "Choose district";
+
+            var isDefaultTimeTo = string.Equals(_timeTo.SelectedItem.ToString(), defaultTime, OrdinalIgnoreCase);
+            var isDefaultTimeFrom = string.Equals(_timeFrom.SelectedItem.ToString(), defaultTime, OrdinalIgnoreCase);
+            var isDefaultWeather = string.Equals(_weather.SelectedItem.ToString(), defaultWeather, OrdinalIgnoreCase);
+            var isDefaultDistrict = string.Equals(_district.SelectedItem.ToString(), defaultDistrict, OrdinalIgnoreCase);
+
+            if (isDefaultTimeTo && isDefaultTimeFrom && isDefaultWeather && isDefaultDistrict)
+            {
+                Toast.MakeText(this, "Select minimum one criteria", ToastLength.Short).Show();
+                _gridView.Adapter = null;
+                return;
+            }
+
+            var to = isDefaultTimeTo ? string.Empty : _timeTo.SelectedItem.ToString();
+            var from = isDefaultTimeFrom ? string.Empty : _timeFrom.SelectedItem.ToString();
+            var weather = isDefaultWeather ? string.Empty : _weather.SelectedItem.ToString();
+            var location = isDefaultDistrict ? string.Empty : _district.SelectedItem.ToString();
 
             var freqRepo = new FrequencyRepository();
-            var plar = freqRepo.GetAllFrequencyGroup().First();
 
-            _gridViewItems = new ArrayList(plar.Frequencies);
+            var criterya = new FrequencyGroup
+            {
+                To = to,
+                From = from,
+                Weather = weather,
+                Location = location
+            };
 
-            ArrayAdapter adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, _gridViewItems);
+            try
+            {
+                var frequency = freqRepo.GetFrequencyByCriterya(criterya);
 
-            _gridView.Adapter = adapter;
+                if (frequency.Count > 0)
+                {
+                    _gridViewItems = new ArrayList(frequency);
+
+                    ArrayAdapter adapter = new ArrayAdapter(this, Android.Resource.Layout.SimpleListItem1, _gridViewItems);
+
+                    _gridView.Adapter = adapter;
+                }
+                else
+                {
+                    resetGridAndPopulateMsg();
+                }
+            }
+            catch
+            {
+                resetGridAndPopulateMsg();
+            }
         }
 
 
         private void _gridView_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            //Toast.MakeText(this, _gridViewItems[e.Position].ToString(), ToastLength.Short).Show();
             var msg = new AlertDialog.Builder(this);
-            msg
-                .SetNegativeButton("OK", (senderAlert, args) => {
+            msg.SetNegativeButton("OK", (senderAlert, args) => {
                     // write your own set of instructions
                 })
-            .SetMessage("An error happened!")
-            .SetTitle("Error")
+            .SetMessage(_gridViewItems[e.Position].ToString())
+            .SetTitle("Frequency")
             .Show();
         }
 
-        private void timeTo_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        private void resetGridAndPopulateMsg()
+        {
+            _gridView.Adapter = null;
+            Toast.MakeText(this, "No frequency found", ToastLength.Short).Show();
+        }
+
+        /*private void timeTo_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
         {
             var spinner = (Spinner)sender;
             string toast = string.Format("Selected car is {0}", spinner.GetItemAtPosition(e.Position));
             Toast.MakeText(this, toast, ToastLength.Long).Show();
-        }
+        }*/
     }
 }
 
