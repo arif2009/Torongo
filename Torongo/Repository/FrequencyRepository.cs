@@ -25,14 +25,14 @@ namespace Torongo.Repository
 
             if (!string.IsNullOrEmpty(criterya.To))
             {
-                frequencyGroups = frequencyGroups.Where(x => string.Equals(x.To, criterya.To, OrdinalIgnoreCase));
-                //frequencyGroups = frequencyGroups.Where(x => int.Parse(x.To) >= int.Parse(criterya.To));
+                //frequencyGroups = frequencyGroups.Where(x => string.Equals(x.To, criterya.To, OrdinalIgnoreCase));
+                frequencyGroups = frequencyGroups.Where(x => int.Parse(x.To) >= int.Parse(criterya.To));
             }
 
             if (!string.IsNullOrEmpty(criterya.From))
             {
-                frequencyGroups = frequencyGroups.Where(x => string.Equals(x.From, criterya.From, OrdinalIgnoreCase));
-                //frequencyGroups = frequencyGroups.Where(x => int.Parse(x.From) <= int.Parse(criterya.From));
+                //frequencyGroups = frequencyGroups.Where(x => string.Equals(x.From, criterya.From, OrdinalIgnoreCase));
+                frequencyGroups = frequencyGroups.Where(x => int.Parse(x.From) <= int.Parse(criterya.From));
             }
 
             if (!string.IsNullOrEmpty(criterya.Weather))
@@ -459,8 +459,8 @@ namespace Torongo.Repository
             },
             new FrequencyGroup()
             {
-                To = "1700",
-                From = "1800",
+                To = "2200",
+                From = "2300",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Jessore.ToString(),
                 Frequencies = new List<long>() { 5655, 5419, 5106, 5019, 4015, 4215, 4217, 4515, 3512, 3115 }
@@ -468,7 +468,7 @@ namespace Torongo.Repository
             new FrequencyGroup()
             {
                 To = "2300",
-                From = "0059",
+                From = "2400",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Dhaka.ToString(),
                 Frequencies = new List<long>() { 4205, 4231, 5562, 3595, 3680, 3565, 4320, 4885, 3215, 3136 }
@@ -476,22 +476,22 @@ namespace Torongo.Repository
             new FrequencyGroup()
             {
                 To = "2300",
-                From = "0059",
+                From = "2400",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Chittagong.ToString(),
                 Frequencies = new List<long>() { 4115, 4535, 5062, 3591, 3580, 3562, 4325, 4870, 3115, 3136 }
             },
             new FrequencyGroup()
             {
-                To = "1800",
-                From = "1900",
+                To = "2300",
+                From = "2400",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Jessore.ToString(),
                 Frequencies = new List<long>() { 4205, 4231, 5562, 3595, 3680, 3565, 4320, 4885, 3215, 3136 }
             },
             new FrequencyGroup()
             {
-                To = "0059",
+                To = "2400",
                 From = "0100",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Dhaka.ToString(),
@@ -499,7 +499,7 @@ namespace Torongo.Repository
             },
             new FrequencyGroup()
             {
-                To = "0059",
+                To = "2400",
                 From = "0100",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Chittagong.ToString(),
@@ -507,7 +507,7 @@ namespace Torongo.Repository
             },
             new FrequencyGroup()
             {
-                To = "0059",
+                To = "2400",
                 From = "0100",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Jessore.ToString(),
@@ -527,7 +527,7 @@ namespace Torongo.Repository
                 From = "0200",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Chittagong.ToString(),
-                Frequencies = new List<long>() { 3315, 3235, 3425, 3515, 3556, 4115, 4230, 4245, 4320, 4510 }
+                Frequencies = new List<long>() { 3315, 3235, 3425, 3515, 3556, 4115, 4230, 4245, 4320, 4220 }
             },
             new FrequencyGroup()
             {
@@ -543,7 +543,7 @@ namespace Torongo.Repository
                 From = "0300",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Dhaka.ToString(),
-                Frequencies = new List<long>() { 4710, 4575, 4435, 3315, 3617, 3225, 2995, 2870, 2996, 3117 }
+                Frequencies = new List<long>() { 4520, 3992, 3422, 3315, 3617, 3225, 2995, 2870, 2996, 3117 }
             },
             new FrequencyGroup()
             {
@@ -551,7 +551,7 @@ namespace Torongo.Repository
                 From = "0300",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Chittagong.ToString(),
-                Frequencies = new List<long>() { 4715, 4576, 4435, 3315, 3617, 3225, 2995, 2870, 2996, 3117 }
+                Frequencies = new List<long>() { 4120, 3224, 2886, 3315, 3617, 3225, 2995, 2870, 2996, 3117 }
             },
             new FrequencyGroup()
             {
@@ -567,7 +567,7 @@ namespace Torongo.Repository
                 From = "0400",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Dhaka.ToString(),
-                Frequencies = new List<long>() { 3130, 3236, 3355, 3450, 3560, 4130, 4145, 4422, 4675, 5535 }
+                Frequencies = new List<long>() { 3130, 3236, 3355, 3450, 3560, 2528, 3220, 2862, 3212, 2962 }
             },
             new FrequencyGroup()
             {
@@ -575,7 +575,7 @@ namespace Torongo.Repository
                 From = "0400",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Chittagong.ToString(),
-                Frequencies = new List<long>() { 3130, 3236, 3355, 3450, 3560, 4130, 4145, 4422, 4675, 5105 }
+                Frequencies = new List<long>() { 3130, 3236, 3355, 3450, 3560, 2528, 3112, 3020, 3212, 2662 }
             },
             new FrequencyGroup()
             {
@@ -583,7 +583,7 @@ namespace Torongo.Repository
                 From = "0400",
                 Weather = WeatherStatus.Clear.ToString(),
                 Location = District.Jessore.ToString(),
-                Frequencies = new List<long>() { 3130, 3236, 3355, 3450, 3560, 4130, 4145, 4422, 4675, 5105 }
+                Frequencies = new List<long>() { 3130, 3236, 3355, 3450, 3560, 2990, 2536, 2772, 2882 }
             },
             new FrequencyGroup()
             {
