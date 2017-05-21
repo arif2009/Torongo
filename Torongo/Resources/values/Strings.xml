@@ -35,7 +35,6 @@
     <item>Clear</item>
     <item>Foggy</item>
     <item>Rainy</item>
-    <item>Sunny</item>
   </string-array>
 
   <string-array name="district_array">
