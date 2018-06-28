@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Torongo.Model;
@@ -35,10 +36,16 @@ namespace Torongo.Repository
                 frequencyGroups = frequencyGroups.Where(x => int.Parse(x.From) <= int.Parse(criterya.From));
             }
 
-            if (!string.IsNullOrEmpty(criterya.Weather))
+            if (!string.IsNullOrEmpty(criterya.To) && !string.IsNullOrEmpty(criterya.From))
+            {
+                var duration = Math.Abs(int.Parse(criterya.From) - int.Parse(criterya.To));
+                frequencyGroups = frequencyGroups.Where(x => Math.Abs(int.Parse(x.From) - int.Parse(x.To)) <= duration);
+            }
+
+            /*if (!string.IsNullOrEmpty(criterya.Weather))
             {
                 frequencyGroups = frequencyGroups.Where(x => string.Equals(x.Weather, criterya.Weather, OrdinalIgnoreCase));
-            }
+            }*/
 
             if (!string.IsNullOrEmpty(criterya.Location))
             {
