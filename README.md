@@ -1,29 +1,39 @@
-# README #
+### Torongo
+---
+Torongo is a frequency counting app for some special purpose.
 
-This README would normally document whatever steps are necessary to get your application up and running.
+#### Development Tools & Technology
+---
+* [Xamarin](https://www.xamarin.com/)
 
-### What is this repository for? ###
+#### Installation
+---
+Cloning the repository:
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+```bash
+# HTTPS clone URL
+$ git clone https://github.com/arif2009/Torongo.git
 
-### How do I get set up? ###
+# SSH clone URL
+$ git@github.com:arif2009/Torongo.git
+```
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+#### Some of app views
+---
+*Home page:*
 
-### Contribution guidelines ###
+![alt text](https://github.com/arif2009/Torongo/blob/master/screenshots/1_Home.png "Home Page")
 
-* Writing tests
-* Code review
-* Other guidelines
+*Dropdown selection:*
 
-### Who do I talk to? ###
+![alt text](https://github.com/arif2009/Torongo/blob/master/screenshots/2_Select.png "Dropdown selection")
 
-* Repo owner or admin
-* Other community or team contact
+*Final frequency:*
+
+![alt text](https://github.com/arif2009/Torongo/blob/master/screenshots/3_Result.png "Final frequency")
+
+#### Author
+Arifur Rahman ( arif.rahman2009@gmail.com )
+
+#### License
+<a href="https://opensource.org/licenses/MIT">The MIT License</a> Copyright &copy; 2017 Arifur Rahman
