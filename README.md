@@ -1,6 +1,6 @@
 ### Torongo
 ---
-Torongo is a frequency counting app for some special purpose.
+Torongo is a frequency counting app for some special purpose of an organization.
 
 #### Development Tools & Technology
 ---
